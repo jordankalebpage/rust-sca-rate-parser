@@ -1,6 +1,6 @@
 use chrono::prelude::*;
 use csv::ReaderBuilder;
-use std::{error::Error, fs::File};
+use std::{error::Error, fs::File, io::Write};
 
 #[derive(Debug, serde::Deserialize)]
 struct Record {
@@ -9,27 +9,56 @@ struct Record {
     rate: f64,
 }
 
-// TODO: need to make a SQL file and add each record to it if it doesn't exist, or update it if it does
+fn main() -> Result<(), Box<dyn Error>> {
+    let rate_records = read_sca_rates()?;
+    write_sql_file(rate_records)?;
 
-fn read_sca_rates() -> Result<(), Box<dyn Error>> {
+    println!("All done :) またねー！");
+    Ok(())
+}
+
+fn read_sca_rates() -> Result<Vec<Record>, Box<dyn Error>> {
+    let mut rate_records: Vec<Record> = Vec::new();
     let mut rdr = ReaderBuilder::new()
         .delimiter(b'|')
         .from_reader(File::open("2025_SCA_Rates.csv")?);
 
     for result in rdr.deserialize() {
         let record: Record = result?;
-        println!("{:?}", record);
+        rate_records.push(record);
     }
 
-    Ok(())
+    Ok(rate_records)
 }
 
-fn main() -> Result<(), Box<dyn Error>> {
+fn write_sql_file(rate_records: Vec<Record>) -> Result<(), Box<dyn Error>> {
     let current_fiscal_year = Local::now().year() + 1;
-    let sql_file = File::create_new(format!("{}_SCA_Rates.sql", current_fiscal_year))?;
+    let mut sql_file = File::create_new(format!("{}_SCA_Rates.sql", current_fiscal_year))?;
 
-    read_sca_rates()?;
+    writeln!(sql_file, "BEGIN TRANSACTION;\n")?;
 
-    println!("All done :) またねー！");
+    for record in rate_records {
+        writeln!(
+            sql_file,
+            "IF NOT EXISTS (SELECT 1 FROM SCA_RATES WHERE OCCUPATION_CODE = '{}') THEN\n\
+            \tINSERT INTO SCA_RATES (OCCUPATION_CODE, TITLE, RATE)\n\
+            \tVALUES ('{}', '{}', {});\n\
+            ELSE\n\
+            \tUPDATE SCA_RATES\n\
+            \tSET RATE = {}\n\
+            \tWHERE OCCUPATION_CODE = '{}';\n\
+            END IF;\n",
+            record.occupation_code,
+            record.occupation_code,
+            record.title,
+            record.rate,
+            record.rate,
+            record.occupation_code
+        )?;
+    }
+
+    writeln!(sql_file, "COMMIT;")?;
+
+    println!("SQL file created successfully!");
     Ok(())
 }
