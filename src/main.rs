@@ -11,27 +11,27 @@ struct Record {
 
 fn main() -> Result<(), Box<dyn Error>> {
     let rate_records = read_sca_rates()?;
-    write_sql_file(rate_records)?;
+    write_sql_file(&rate_records)?;
 
     println!("All done :) またねー！");
     Ok(())
 }
 
 fn read_sca_rates() -> Result<Vec<Record>, Box<dyn Error>> {
-    let mut rate_records: Vec<Record> = Vec::new();
+    let mut rate_records = Vec::new();
     let mut rdr = ReaderBuilder::new()
         .delimiter(b'|')
         .from_reader(File::open("2025_SCA_Rates.csv")?);
 
     for result in rdr.deserialize() {
-        let record: Record = result?;
+        let record = result?;
         rate_records.push(record);
     }
 
     Ok(rate_records)
 }
 
-fn write_sql_file(rate_records: Vec<Record>) -> Result<(), Box<dyn Error>> {
+fn write_sql_file(rate_records: &Vec<Record>) -> Result<(), Box<dyn Error>> {
     let current_fiscal_year = Local::now().year() + 1;
     let mut sql_file = File::create_new(format!("{}_SCA_Rates.sql", current_fiscal_year))?;
 
