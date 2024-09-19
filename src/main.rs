@@ -1,5 +1,6 @@
+use chrono::prelude::*;
 use csv::ReaderBuilder;
-use std::{error::Error, fs::File, process};
+use std::{error::Error, fs::File};
 
 #[derive(Debug, serde::Deserialize)]
 struct Record {
@@ -7,6 +8,8 @@ struct Record {
     title: String,
     rate: f64,
 }
+
+// TODO: need to make a SQL file and add each record to it if it doesn't exist, or update it if it does
 
 fn read_sca_rates() -> Result<(), Box<dyn Error>> {
     let mut rdr = ReaderBuilder::new()
@@ -18,13 +21,15 @@ fn read_sca_rates() -> Result<(), Box<dyn Error>> {
         println!("{:?}", record);
     }
 
-    println!("All done :) またねー！");
     Ok(())
 }
 
-fn main() {
-    if let Err(err) = read_sca_rates() {
-        println!("error: {}", err);
-        process::exit(1);
-    }
+fn main() -> Result<(), Box<dyn Error>> {
+    let current_fiscal_year = Local::now().year() + 1;
+    let sql_file = File::create_new(format!("{}_SCA_Rates.sql", current_fiscal_year))?;
+
+    read_sca_rates()?;
+
+    println!("All done :) またねー！");
+    Ok(())
 }
