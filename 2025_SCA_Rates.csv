@@ -1,0 +1,367 @@
+﻿occupation_code|title|rate
+01011|Accounting Clerk I|23.78
+01012|Accounting Clerk II|26.69
+01013|Accounting Clerk III|29.85
+01020|Administrative Assistant|46.70
+01035|Court Reporter|62.05
+01041|Customer Service Representative I|20.32
+01042|Customer Service Representative II|22.17
+01043|Customer Service Representative III|24.88
+01051|Data Entry Operator I|21.43
+01052|Data Entry Operator II|23.38
+01060|Dispatcher, Motor Vehicle|29.13
+01070|Document Preparation Clerk|20.57
+01090|Duplicating Machine Operator|20.57
+01111|General Clerk I|20.58
+01112|General Clerk II|22.46
+01113|General Clerk III|25.22
+01120|Housing Referral Assistant|31.71
+01141|Messenger Courier|23.05
+01191|Order Clerk I|21.34
+01192|Order Clerk II|23.29
+01261|Personnel Assistant (Employment) I|24.85
+01262|Personnel Assistant (Employment) II|27.79
+01263|Personnel Assistant (Employment) III|30.98
+01270|Production Control Clerk|33.35
+01290|Rental Clerk|22.10
+01300|Scheduler, Maintenance|25.43
+01311|Secretary I|25.43
+01312|Secretary II|28.45
+01313|Secretary III|31.71
+01320|Service Order Dispatcher|24.50
+01410|Supply Technician|46.70
+01420|Survey Worker|28.86
+01460|Switchboard Operator/Receptionist|22.24
+01531|Travel Clerk I|24.40
+01532|Travel Clerk II|26.57
+01533|Travel Clerk III|29.01
+01611|Word Processor I|26.14
+01612|Word Processor II|29.33
+01613|Word Processor III|32.81
+05005|Automobile Body Repairer, Fiberglass|30.09
+05010|Automotive,Electrician|30.12
+05040|Automotive Glass Installer|28.50
+05070|Automotive Worker|28.50
+05110|Mobile Equipment Servicer|25.13
+05130|Motor Equipment Metal Mechanic|31.76
+05160|Motor Equipment Metal Worker|28.50
+05190|Motor Vehicle Mechanic|31.76
+05220|Motor Vehicle Mechanic Helper|23.22
+05250|Motor Vehicle Upholstery Worker|26.88
+05280|Motor Vehicle Wrecker|28.50
+05310|Painter, Automotive|30.12
+05340|Radiator Repair Specialist|28.50
+05370|Tire Repairer|21.61
+05400|Transmission Repair Specialist|31.76
+07010|Baker|20.93
+07041|Cook I|22.93
+07042|Cook II|26.00
+07070|Dishwasher|19.01
+07130|Food Service Worker|19.17
+07210|Meat Cutter|22.03
+07260|Waiter/Waitress|18.03
+09010|Electrostatic Spray Painter|29.69
+09040|Furniture Handler|15.94
+09080|Furniture Refinisher|24.84
+09090|Furniture Refinisher Helper|19.15
+09110|Furniture Repairer, Minor|22.16
+09130|Upholsterer|25.97
+11030|Cleaner, Vehicles|19.40
+11060|Elevator Operator|20.06
+11090|Gardener|28.97
+11122|Housekeeping Aide|20.81
+11150|Janitor|20.81
+11210|Laborer, Grounds Maintenance|22.29
+11240|Maid or Houseman|21.68
+11260|Pruner|20.05
+11270|Tractor Operator|26.77
+11330|Trail Maintenance Worker|22.29
+11360|Window Cleaner|23.13
+12010|Ambulance Driver|24.06
+12011|Breath Alcohol Technician|36.06
+12012|Certified Occupational Therapist Assistant|46.60
+12015|Certified Physical Therapist Assistant|44.92
+12020|Dental Assistant|30.33
+12025|Dental Hygienist|66.08
+12030|EKG Technician|43.42
+12035|Electroneurodiagnostic Technologist|43.42
+12040|Emergency Medical Technician|24.06
+12071|Licensed Practical Nurse I|32.24
+12072|Licensed Practical Nurse II|36.06
+12073|Licensed Practical Nurse III|40.22
+12100|Medical Assistant|28.74
+12130|Medical Laboratory Technician|38.31
+12160|Medical Record Clerk|31.02
+12190|Medical Record Technician|34.70
+12195|Medical Transcriptionist|25.94
+12210|Nuclear Medicine Technologist|85.55
+12221|Nursing Assistant I|17.58
+12222|Nursing Assistant II|19.78
+12223|Nursing Assistant III|21.58
+12224|Nursing Assistant IV|24.22
+12235|Optical Dispenser|28.22
+12236|Optical Technician|27.26
+12250|Pharmacy Technician|29.56
+12280|Phlebotomist|27.06
+12305|Radiologic Technologist|65.43
+12311|Registered Nurse I|49.13
+12312|Registered Nurse II|60.10
+12313|Registered Nurse II, Specialist|60.10
+12314|Registered Nurse III|72.70
+12315|Registered Nurse III, Anesthetist|72.70
+12316|Registered Nurse IV|87.14
+12317|Scheduler (Drug and Alcohol Testing)|44.69
+12320|Substance Abuse Treatment Counselor|29.86
+13011|Exhibits Specialist I|25.45
+13012|Exhibits Specialist II|31.05
+13013|Exhibits Specialist III|37.98
+13041|Illustrator I|29.13
+13042|Illustrator II|36.07
+13043|Illustrator III|44.14
+13047|Librarian|45.23
+13050|Library Aide/Clerk|27.69
+13054|Library Information Technology Systems Administrator|40.84
+13058|Library Technician|29.38
+13061|Media Specialist I|29.47
+13062|Media Specialist II|32.97
+13063|Media Specialist III|36.75
+13071|Photographer I|23.80
+13072|Photographer II|26.63
+13073|Photographer III|33.00
+13074|Photographer IV|40.35
+13075|Photographer V|48.82
+13090|Technical Order Library Clerk|32.51
+13110|Video Teleconference Technician|31.24
+14041|Computer Operator I|27.83
+14042|Computer Operator II|31.13
+14043|Computer Operator III|34.72
+14044|Computer Operator IV|38.58
+14045|Computer Operator V|42.72
+14071|Computer Programmer I|27.63
+14072|Computer Programmer II|27.63
+14073|Computer Programmer III|27.63
+14074|Computer Programmer IV|27.63
+14101|Computer Systems Analyst I|27.63
+14102|Computer Systems Analyst II|27.63
+14103|Computer Systems Analyst III|27.63
+14150|Peripheral Equipment Operator|27.83
+14160|Personal Computer Support Technician|38.58
+14170|System Support Specialist|43.12
+15010|Aircrew Training Devices Instructor (Non-Rated)|46.95
+15020|Aircrew Training Devices Instructor (Rated)|56.80
+15030|Air Crew Training Devices Instructor (Pilot)|68.08
+15050|Computer Based Training Specialist / Instructor|46.95
+15060|Educational Technologist|43.63
+15070|Flight Instructor (Pilot)|68.08
+15080|Graphic Artist|44.41
+15085|Maintenance Test Pilot, Fixed, Jet/Prop|68.08
+15086|Maintenance Test Pilot, Rotary Wing|68.08
+15088|Non-Maintenance Test/Co-Pilot|68.08
+15090|Technical Instructor|33.96
+15095|Technical Instructor/Course Developer|41.54
+15110|Test Proctor|27.42
+15120|Tutor|27.42
+16010|Assembler|21.57
+16030|Counter Attendant|21.57
+16040|Dry Cleaner|24.65
+16070|Finisher, Flatwork, Machine|21.57
+16090|Presser, Hand|21.57
+16110|Presser, Machine, Drycleaning|21.57
+16130|Presser, Machine, Shirts|21.57
+16160|Presser, Machine, Wearing Apparel, Laundry|21.57
+16190|Sewing Machine Operator|25.67
+16220|Tailor|26.70
+16250|Washer, Machine|22.60
+19010|Machine-Tool Operator (Tool Room)|29.05
+19040|Tool And Die Maker|35.85
+21020|Forklift Operator|25.49
+21030|Material Coordinator|33.35
+21040|Material Expediter|33.35
+21050|Material Handling Laborer|22.25
+21071|Order Filler|20.93
+21080|Production Line Worker (Food Processing)|25.49
+21110|Shipping Packer|22.58
+21130|Shipping/Receiving Clerk|22.58
+21140|Store Worker I|20.55
+21150|Stock Clerk|26.68
+21210|Tools And Parts Attendant|25.49
+21410|Warehouse Specialist|25.49
+23010|Aerospace Structural Welder|44.10
+23019|Aircraft Logs and Records Technician|35.51
+23021|Aircraft Mechanic I|41.96
+23022|Aircraft Mechanic II|44.10
+23023|Aircraft Mechanic III|45.96
+23040|Aircraft Mechanic Helper|30.68
+23050|Aircraft, Painter|39.80
+23060|Aircraft Servicer|35.51
+23070|Aircraft Survival Flight Equipment Technician|39.80
+23080|Aircraft Worker|37.65
+23091|Aircrew Life Support Equipment (ALSE) Mechanic I|37.65
+23092|Aircrew Life Support Equipment (ALSE) Mechanic II|41.96
+23110|Appliance Mechanic|28.11
+23120|Bicycle Repairer|23.69
+23125|Cable Splicer|64.66
+23130|Carpenter, Maintenance|38.33
+23140|Carpet Layer|33.40
+23160|Electrician, Maintenance|50.38
+23181|Electronics Technician Maintenance I|38.82
+23182|Electronics Technician Maintenance II|41.03
+23183|Electronics Technician Maintenance III|43.26
+23260|Fabric Worker|37.83
+23290|Fire Alarm System Mechanic|33.34
+23310|Fire Extinguisher Repairer|34.29
+23311|Fuel Distribution System Mechanic|50.00
+23312|Fuel Distribution System Operator|39.53
+23370|General Maintenance Worker|29.52
+23380|Ground Support Equipment Mechanic|41.96
+23381|Ground Support Equipment Servicer|35.51
+23382|Ground Support Equipment Worker|37.65
+23391|Gunsmith I|34.29
+23392|Gunsmith II|38.88
+23393|Gunsmith III|43.34
+23410|Heating, Ventilation And Air-Conditioning Mechanic|35.79
+23411|Heating, Ventilation And Air Contidioning Mechanic (Research Facility)|37.61
+23430|Heavy Equipment Mechanic|40.35
+23440|Heavy Equipment Operator|51.60
+23460|Instrument Mechanic|45.53
+23465|Laboratory/Shelter Mechanic|41.11
+23470|Laborer|22.25
+23510|Locksmith|28.95
+23530|Machinery Maintenance Mechanic|40.96
+23550|Machinist, Maintenance|31.54
+23580|Maintenance Trades Helper|22.09
+23591|Metrology Technician I|45.53
+23592|Metrology Technician II|47.85
+23593|Metrology Technician III|49.87
+23640|Millwright|47.45
+23710|Office Appliance Repairer|30.30
+23760|Painter, Maintenance|30.71
+23790|Pipefitter, Maintenance|41.10
+23810|Plumber, Maintenance|38.96
+23820|Pneudraulic Systems Mechanic|43.34
+23850|Rigger|42.88
+23870|Scale Mechanic|38.88
+23890|Sheet-Metal Worker, Maintenance|43.27
+23910|Small Engine Mechanic|25.63
+23931|Telecommunications Mechanic I|38.73
+23932|Telecommunications Mechanic II|40.71
+23950|Telephone Lineman|46.82
+23960|Welder, Combination, Maintenance|29.52
+23965|Well Driller|36.77
+23970|Woodcraft Worker|43.34
+23980|Woodworker|34.29
+24550|Case Manager|25.47
+24570|Child Care Attendant|21.16
+24580|Child Care Center Clerk|26.40
+24610|Chore Aide|16.73
+24620|Family Readiness And Support Services Coordinator|25.47
+24630|Homemaker|25.47
+25010|Boiler Tender|55.09
+25040|Sewage Plant Operator|49.98
+25070|Stationary Engineer|55.09
+25190|Ventilation Equipment Tender|40.28
+25210|Water Treatment Plant Operator|49.98
+27004|Alarm Monitor|50.29
+27007|Baggage Inspector|21.34
+27008|Corrections Officer|45.89
+27010|Court Security Officer|49.35
+27030|Detection Dog Handler|30.14
+27040|Detention Officer|45.89
+27070|Firefighter|52.80
+27101|Guard I|21.34
+27102|Guard II|30.14
+27131|Police Officer I|58.36
+27132|Police Officer II|64.84
+28041|Carnival Equipment Operator|24.54
+28042|Carnival Equipment Repairer|26.55
+28043|Carnival Worker|18.38
+28210|Gate Attendant/Gate Tender|24.72
+28310|Lifeguard|18.57
+28350|Park Attendant (Aide)|27.65
+28510|Recreation Aide/Health Facility Attendant|20.19
+28515|Recreation Specialist|34.26
+28630|Sports Official|22.03
+28690|Swimming Pool Operator|30.11
+29010|Blocker And Bracer|39.53
+29020|Hatch Tender|39.53
+29030|Line Handler|39.53
+29041|Stevedore I|37.27
+29042|Stevedore II|41.78
+30010|Air Traffic Control Specialist, Center (HFO)|56.27
+30011|Air Traffic Control Specialist, Station (HFO)|38.81
+30012|Air Traffic Control Specialist, Terminal (HFO)|42.74
+30021|Archeological Technician I|24.86
+30022|Archeological Technician II|27.80
+30023|Archeological Technician III|34.44
+30030|Cartographic Technician|34.44
+30040|Civil Engineering Technician|46.48
+30051|Cryogenic Technician I|38.13
+30052|Cryogenic Technician II|42.12
+30061|Drafter/CAD Operator I|24.86
+30062|Drafter/CAD Operator II|27.80
+30063|Drafter/CAD Operator III|30.99
+30064|Drafter/CAD Operator IV|38.15
+30081|Engineering Technician I|20.77
+30082|Engineering Technician II|23.30
+30083|Engineering Technician III|26.07
+30084|Engineering Technician IV|32.30
+30085|Engineering Technician V|39.51
+30086|Engineering Technician VI|47.80
+30090|Environmental Technician|34.94
+30095|Evidence Control Specialist|34.43
+30210|Laboratory Technician|33.89
+30221|Latent Fingerprint Technician I|45.41
+30222|Latent Fingerprint Technician II|50.16
+30240|Mathematical Technician|52.55
+30361|Paralegal/Legal Assistant I|26.57
+30362|Paralegal/Legal Assistant II|32.93
+30363|Paralegal/Legal Assistant III|40.28
+30364|Paralegal/Legal Assistant IV|48.73
+30375|Petroleum Supply Specialist|42.12
+30390|Photo-Optics Technician|35.89
+30395|Radiation Control Technician|42.12
+30461|Technical Writer I|40.74
+30462|Technical Writer II|49.84
+30463|Technical Writer III|60.29
+30491|Unexploded Ordnance (UXO) Technician I|35.77
+30492|Unexploded Ordnance (UXO) Technician II|43.27
+30493|Unexploded Ordnance (UXO) Technician III|51.87
+30494|Unexploded (UXO) Safety Escort|35.77
+30495|Unexploded (UXO) Sweep Personnel|35.77
+30501|Weather Forecaster I|38.13
+30502|Weather Forecaster II|46.38
+30620|Weather Observer, Combined Upper Air Or Surface Programs|30.99
+30621|Weather Observer, Senior|34.43
+31010|Airplane Pilot|43.27
+31020|Bus Aide|26.22
+31030|Bus Driver|36.45
+31043|Driver Courier|21.54
+31260|Parking and Lot Attendant|19.05
+31290|Shuttle Bus Driver|23.14
+31310|Taxi Driver|17.93
+31361|Truckdriver, Light|23.31
+31362|Truckdriver, Medium|24.93
+31363|Truckdriver, Heavy|30.17
+31364|Truckdriver, Tractor-Trailer|30.17
+99020|Cabin Safety Specialist|21.10
+99030|Cashier|18.55
+99050|Desk Clerk|20.17
+99095|Embalmer|33.15
+99130|Flight Follower|35.77
+99251|Laboratory Animal Caretaker I|21.65
+99252|Laboratory Animal Caretaker II|23.43
+99260|Marketing Analyst|51.34
+99310|Mortician|29.47
+99410|Pest Controller|22.97
+99510|Photofinishing Worker|22.97
+99710|Recycling Laborer|38.60
+99711|Recycling Specialist|46.15
+99730|Refuse Collector|34.73
+99810|Sales Clerk|19.32
+99820|School Crossing Guard|25.31
+99830|Survey Party Chief|45.28
+99831|Surveying Aide|27.24
+99832|Surveying Technician|39.83
+99840|Vending Machine Attendant|19.07
+99841|Vending Machine Repairer|23.40
+99842|Vending Machine Repairer Helper|19.07
