@@ -1,6 +1,7 @@
 use chrono::prelude::*;
 use csv::ReaderBuilder;
 use std::{
+    collections::HashMap,
     error::Error,
     fs::File,
     io::{BufWriter, Write},
@@ -17,7 +18,6 @@ struct NewSCARecord {
 #[derive(Debug, serde::Deserialize)]
 struct PreviousSCARecord {
     occupation_code: String,
-    title: String,
     description: String,
 }
 
@@ -56,6 +56,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 fn read_sca_rates() -> Result<Vec<Record>, Box<dyn Error>> {
+    // CSV is 366 rows right now - doubt it gets much bigger. so just allocate 500 for now
     let mut rate_records = Vec::with_capacity(500);
     let mut rdr = ReaderBuilder::new()
         .delimiter(b'|')
@@ -75,22 +76,22 @@ fn read_sca_rates() -> Result<Vec<Record>, Box<dyn Error>> {
 }
 
 fn read_previous_rates_for_descriptions(
-    mut rate_records: Vec<Record>,
+    rate_records: Vec<Record>,
 ) -> Result<Vec<Record>, Box<dyn Error>> {
+    let mut rate_map: HashMap<String, Record> = HashMap::with_capacity(rate_records.len());
+    for record in rate_records {
+        rate_map.insert(record.occupation_code.clone(), record);
+    }
     let mut rdr = ReaderBuilder::new().from_reader(File::open("2023_sca_rates_export_arrs.csv")?);
 
     for result in rdr.deserialize() {
         let prev_record: PreviousSCARecord = result?;
-        for rate_record in &mut rate_records {
-            if rate_record.occupation_code == prev_record.occupation_code {
-                // need to escape single quotes in description
-                rate_record.description = prev_record.description.replace("'", "''");
-                break;
-            }
+        if let Some(rate_record) = rate_map.get_mut(&prev_record.occupation_code) {
+            rate_record.description = prev_record.description.replace("'", "''");
         }
     }
 
-    Ok(rate_records)
+    Ok(rate_map.into_values().collect())
 }
 
 fn write_sql_file(rate_records: &[Record]) -> Result<(), Box<dyn Error>> {
