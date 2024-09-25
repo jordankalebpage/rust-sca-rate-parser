@@ -8,6 +8,20 @@ use std::{
 };
 
 #[derive(Debug, serde::Deserialize)]
+struct NewSCARecord {
+    occupation_code: String,
+    title: String,
+    rate: f64,
+}
+
+#[derive(Debug, serde::Deserialize)]
+struct PreviousSCARecord {
+    occupation_code: String,
+    title: String,
+    description: String,
+}
+
+#[derive(Debug)]
 struct Record {
     occupation_code: String,
     description: String,
@@ -42,15 +56,19 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 
 fn read_sca_rates() -> Result<Vec<Record>, Box<dyn Error>> {
-    // CSV is 366 rows right now - doubt it gets much bigger. so just allocate 500 for now
     let mut rate_records = Vec::with_capacity(500);
     let mut rdr = ReaderBuilder::new()
         .delimiter(b'|')
         .from_reader(File::open("2025_SCA_Rates.csv")?);
 
     for result in rdr.deserialize() {
-        let record: Record = result?;
-        rate_records.push(record);
+        let new_record: NewSCARecord = result?;
+        rate_records.push(Record {
+            occupation_code: new_record.occupation_code,
+            description: String::new(),
+            title: new_record.title,
+            rate: new_record.rate,
+        });
     }
 
     Ok(rate_records)
@@ -62,10 +80,11 @@ fn read_previous_rates_for_descriptions(
     let mut rdr = ReaderBuilder::new().from_reader(File::open("2023_sca_rates_export_arrs.csv")?);
 
     for result in rdr.deserialize() {
-        let record: Record = result?;
+        let prev_record: PreviousSCARecord = result?;
         for rate_record in &mut rate_records {
-            if rate_record.occupation_code == record.occupation_code {
-                rate_record.description = record.description;
+            if rate_record.occupation_code == prev_record.occupation_code {
+                // need to escape single quotes in description
+                rate_record.description = prev_record.description.replace("'", "''");
                 break;
             }
         }
@@ -75,7 +94,7 @@ fn read_previous_rates_for_descriptions(
 }
 
 fn write_sql_file(rate_records: &[Record]) -> Result<(), Box<dyn Error>> {
-    let current_fiscal_year = Local::now().year() + 1;
+    let current_fiscal_year = Local::now().year();
     let sql_file = File::create(format!(
         "V1.1.114__Insert_{}_SCA_Rates.sql",
         current_fiscal_year
@@ -92,7 +111,7 @@ fn write_sql_file(rate_records: &[Record]) -> Result<(), Box<dyn Error>> {
     for record in rate_records {
         writeln!(writer,
         "INSERT INTO dbo.Jobs (JobGuid, JobCode, JobTitle, Description, HourlyWageRate, IsSCAJob, CreatedDate, Year)\n\
-        VALUES (NEWID(), '{code}', '{title}', '{description}', {rate}, 1, GETUTCDATE(), {year})\n",
+        VALUES (NEWID(), '{code}', '{title}', '{description}', {rate}, 1, GETUTCDATE(), '{year}')\n",
         code = record.occupation_code,
         title = record.title,
         description = record.description,
