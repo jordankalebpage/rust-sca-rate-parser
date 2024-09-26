@@ -104,7 +104,7 @@ fn write_sql_file(rate_records: &[Record]) -> Result<(), Box<dyn Error>> {
 
     writeln!(
         writer,
-        "IF NOT EXISTS (SELECT 1 FROM Jobs WHERE YEAR = {year})\n\
+        "IF NOT EXISTS (SELECT 1 FROM Jobs WHERE YEAR = '{year}')\n\
         BEGIN\n",
         year = current_fiscal_year
     )?;
